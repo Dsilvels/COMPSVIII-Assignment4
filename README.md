@@ -36,24 +36,28 @@ Your task is to containerize this existing application using Docker. You need to
 3. Run a container from your image
 4. Verify the application works by accessing it in your browser
 
+
 ## Starting the Application
 
-- To build the docker image run the command:
+Build the Docker image:
 
 ```bash
-
+docker build -t compsviii-assignment4 .
 ```
 
-- To run your docker container in port 3000 run the command:
+Run the Docker container:
 
 ```bash
-
+docker run -d -p 3000:3000 --name my-node-container compsviii-assignment4
 ```
+
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
 
+Docker containers and virtual machines are similar because they both allow applications to run in their own environments. The main difference is that virtual machines have their own operating systems, while Docker containers share the computer's operating system. This makes Docker containers faster and allows them to use less space and memory.
 
+I think development teams would choose Docker because it makes running and sharing applications easier. Developers don't have to worry as much about having different software on their computers because Docker already has what the application needs. It also makes testing and running applications easier. For this assignment, I was able to run a Node.js application using Docker without having to install Node.js on my computer.
 
 ## Application Requirements for Docker
 
